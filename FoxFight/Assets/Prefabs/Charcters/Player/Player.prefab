@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1898734332}
   - component: {fileID: 1898734331}
   - component: {fileID: 4655032153087942768}
+  - component: {fileID: 3558113187791068940}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 72de0c64f2c6a498096698322c976a67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -114,10 +115,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.6393722
+  m_Mass: 0.66546917
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -136,9 +137,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0050867796, y: -0.09000001}
+  m_Offset: {x: 0, y: -0.09462436}
   serializedVersion: 2
-  m_Radius: 0.06673062
+  m_Radius: 0.07135497
 --- !u!61 &4655032153087942768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,7 +153,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.007996412}
+  m_Offset: {x: 0, y: -0.0040521845}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -163,5 +164,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.12197765, y: 0.094980136}
+  m_Size: {x: 0.12197765, y: 0.087091744}
   m_EdgeRadius: 0
+--- !u!114 &3558113187791068940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4673420774138317089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4378a6d2026307e44a8743176d05b21c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movespeed: 10
+  jumpmove: 300
+  maxvel: 10
