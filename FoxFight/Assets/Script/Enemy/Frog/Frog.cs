@@ -10,6 +10,8 @@ public class Frog : MonoBehaviour
     private Animator anim;
     private Transform TPlayer;
 
+    float faceposition;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -23,10 +25,12 @@ public class Frog : MonoBehaviour
     {
         frogAnim();
         TPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        faceposition = frogbody.transform.localScale.x;
     }
 
     void Update()
     {
+        FrogFace(frogbody);
         transform.position = Vector2.MoveTowards(transform.position, TPlayer.position, movespeed * Time.deltaTime);
     }
 
@@ -45,5 +49,16 @@ public class Frog : MonoBehaviour
         }
 
     }//frogAnim
+
+    void FrogFace(Rigidbody2D frogbody)
+    {
+        if (frogbody.transform.position.x >= TPlayer.transform.position.x)
+        {
+            transform.localScale = new Vector2(faceposition, transform.localScale.y);
+        }else {
+            transform.localScale = new Vector2(-faceposition, transform.localScale.y);
+        }
+
+    }//frogFace
 
 }//frog
