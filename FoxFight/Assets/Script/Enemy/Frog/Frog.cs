@@ -61,4 +61,12 @@ public class Frog : MonoBehaviour
 
     }//frogFace
 
+    void OnTriggerEnter2D(Collider2D frogbody)
+    {
+        if (frogbody.tag == "DeSpawn")
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
 }//frog

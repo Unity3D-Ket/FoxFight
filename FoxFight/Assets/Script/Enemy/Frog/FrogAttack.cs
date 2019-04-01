@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpossumAttack : MonoBehaviour
+public class FrogAttack : MonoBehaviour
 {
-    public float timeattack =.5f;
-    public int amount = 15;
+    public float timeattack = .5f;
+    public int amount = 25;
 
     GameObject PTarget;
     PlayerHealth PlayerHealth;
@@ -19,17 +19,17 @@ public class OpossumAttack : MonoBehaviour
         PlayerHealth = PTarget.GetComponent<PlayerHealth>();
     }
 
-    void OnCollisionEnter2D(Collision2D Opos)
+    void OnCollisionEnter2D(Collision2D frog)
     {
-        if (Opos.gameObject == PTarget)
+        if (frog.gameObject == PTarget)
         {
             playerRange = true;
         }
     }
 
-    void OnCollisionExit2D(Collision2D Opos)
+    void OnCollisionExit2D(Collision2D frog)
     {
-        if (Opos.gameObject == PTarget)
+        if (frog.gameObject == PTarget)
         {
             playerRange = false;
         }
@@ -69,4 +69,4 @@ public class OpossumAttack : MonoBehaviour
         }
     }
 
-}//opoAttack
+}

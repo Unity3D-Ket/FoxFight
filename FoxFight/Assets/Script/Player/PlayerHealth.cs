@@ -7,9 +7,9 @@ public class PlayerHealth : MonoBehaviour
 {
     public int startingHealth = 200, currentHealth, amount;
     public Slider healthSlider;
-    public Image damageImage;
-    public float flashSpeed = 5f;
-    public Color flashcolor = new Color(1f,0f,0f,.1f);
+    //public Image damageImage;
+    //public float flashSpeed = 5f;
+    //public Color flashcolor = new Color(1f,0f,0f,.1f);
 
     Animator anim;
     Player Player; //reference to Player SCript
@@ -27,22 +27,23 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScreenFlash();
-        TakenDmg(amount);
+        
     }
 
-    public void ScreenFlash()
-    {
-        if (damage)
-        {
-            damageImage.color = flashcolor;
-        }
-        else {
-            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
-        }
+    //public void ScreenFlash()
+    //{
+    //    TakenDmg(amount);
 
-        damage = false;
-    }
+    //    if (damage)
+    //    {
+    //        damageImage.color = flashcolor;
+    //    }
+    //    else {
+    //        damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+    //    }
+
+    //    damage = false;
+    //}
 
     public void TakenDmg(int amount)
     {
@@ -51,7 +52,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= amount;
         healthSlider.value = currentHealth;
 
-        anim.SetTrigger("Hurt");
+        //anim.SetBool("Hurting", true);
 
         //if (currentHealth <= 0 ) {
         //    Death();

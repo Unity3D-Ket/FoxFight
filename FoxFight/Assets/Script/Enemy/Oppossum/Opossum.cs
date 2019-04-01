@@ -41,4 +41,12 @@ public class Opossum : MonoBehaviour
 
     }//Flip
 
+    void OnTriggerEnter2D(Collider2D posbody)
+    {
+        if (posbody.tag == "DeSpawn")
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
 }//Opossum
