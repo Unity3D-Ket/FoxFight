@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
 
         }
 
-        if (v < 0)
+        if (v < 0) //TODO: FIX 2D BOX COLLIDER TO MOVE WITH THE PLAYERBODY
         {
             anim.SetBool("Crouching", true);
             //anim.SetBool("Running", true);

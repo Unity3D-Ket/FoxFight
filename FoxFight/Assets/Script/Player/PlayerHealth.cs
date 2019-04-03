@@ -54,6 +54,11 @@ public class PlayerHealth : MonoBehaviour
 
         //anim.SetBool("Hurting", true);
 
+        //if (!damage) TODO: Fix Hurting Animation off
+        //{
+        //    anim.SetBool("Hurting", false);
+        //}
+
         //if (currentHealth <= 0 ) {
         //    Death();
         //}
