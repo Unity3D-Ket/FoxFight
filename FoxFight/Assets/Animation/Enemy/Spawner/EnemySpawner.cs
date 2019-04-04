@@ -53,7 +53,7 @@ public class EnemySpawner : MonoBehaviour
 
         }
 
-        StartCoroutine(EnemySpawnTimer(Random.Range(2,7)));
+        StartCoroutine(EnemySpawnTimer(Random.Range(5,7)));
     }
 
 }//spawner
