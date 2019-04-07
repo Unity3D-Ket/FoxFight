@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float movespeed = 10f, jumpmove = 600f, maxvel = 10f;
+    public float movespeed = 10f, jumpmove = 15f, maxvel = 10f;
     private Rigidbody2D playerbody;
     private Animator anim;
 
@@ -65,7 +65,9 @@ public class Player : MonoBehaviour
 
             if (floored)
             {
+                
                 floored = false;
+                playerbody.AddForce(new Vector2(0, 5f), ForceMode2D.Impulse);
                 moveY = jumpmove;
 
             }
@@ -87,7 +89,7 @@ public class Player : MonoBehaviour
             //anim.SetBool("Running", false);
         }
 
-        playerbody.AddForce(new Vector2(moveX, moveY));
+        playerbody.velocity = new Vector2(moveX, playerbody.velocity.y);
 
     } //playermovement
 
