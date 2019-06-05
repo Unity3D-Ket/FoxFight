@@ -37,7 +37,7 @@ public class Frog : MonoBehaviour
     void frogAnim()
     { //TODO: Add in temp pause enemy movement to add in idle animation
 
-        if (movespeed >= 0) //works only when its greater & equal to movespeed
+        if (movespeed >= 0) 
         {
             anim.SetBool("Jump", true);
             //anim.SetBool("Idle", false);

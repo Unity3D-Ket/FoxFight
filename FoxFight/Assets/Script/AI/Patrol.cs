@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Patrol : MonoBehaviour
 {
-    public GameObject Player;
     private Transform TPlayer;
     private bool movingLeft = true;
     private Rigidbody2D oposBody;
-    private float faceposition;
 
     public float speed;
     public float raylength;
@@ -20,7 +18,7 @@ public class Patrol : MonoBehaviour
     {
         Physics2D.queriesStartInColliders = false;
         oposBody = GetComponent<Rigidbody2D>();
-        TPlayer = Player.GetComponent<Transform>();
+        //TPlayer = Player.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -51,17 +49,8 @@ public class Patrol : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (oposBody.transform.position.x >= TPlayer.position.x)
-        {
-            transform.localScale = new Vector2(faceposition, transform.localScale.y);
-            transform.position = Vector2.MoveTowards(transform.position, TPlayer.position, speed * Time.deltaTime);
-        }
-        else
-        {
-            transform.localScale = new Vector2(-faceposition, transform.localScale.y);
-            transform.position = Vector2.MoveTowards(transform.position, TPlayer.position, -speed * Time.deltaTime);
-        }
-
+        TPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        transform.position = Vector2.MoveTowards(transform.position, TPlayer.position, speed * Time.deltaTime);
     }
 
     void OnTriggerExit2D(Collider2D other)

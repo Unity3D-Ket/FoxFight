@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class OpossumAttack : MonoBehaviour
 {
-    public float timeattack =.5f;
-    public int amount = 15;
+    public float timeattack = 1.5f;
+    public int amount;
 
     GameObject PTarget;
     PlayerHealth PlayerHealth;

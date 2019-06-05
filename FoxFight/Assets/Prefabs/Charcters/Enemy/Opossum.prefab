@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2554625604546266432}
   - component: {fileID: 2554625604546266433}
   - component: {fileID: 720399412563753796}
+  - component: {fileID: 9110499706870828816}
   - component: {fileID: 8392345741908195160}
   - component: {fileID: 1132814581}
   - component: {fileID: 111858346627045355}
@@ -142,6 +143,32 @@ CapsuleCollider2D:
   m_Offset: {x: -0.031764187, y: -0.039999973}
   m_Size: {x: 0.20647167, y: 0.12}
   m_Direction: 0
+--- !u!61 &9110499706870828816
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2554625604546266435}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.54, y: 0.004200317}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.36, y: 0.28}
+    newSize: {x: 0.36, y: 0.28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.81000006, y: 0.12038946}
+  m_EdgeRadius: 0
 --- !u!114 &8392345741908195160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,33 +197,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeattack: 0.5
-  amount: 10
---- !u!61 &111858346627045355
-BoxCollider2D:
+  amount: 25
+--- !u!114 &111858346627045355
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2554625604546266435}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.02, y: 0.040264413}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.36, y: 0.28}
-    newSize: {x: 0.36, y: 0.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1499981, y: 0.22300494}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f103d46902f20f4fb73b6e0987b8c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 100
+  currentHealth: 0
 --- !u!1 &7944485889160688474
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7944485889160688474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.566, y: -0.123, z: 0}
+  m_LocalPosition: {x: -0.04, y: -0.142, z: 0}
   m_LocalScale: {x: 1, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 2554625604546266438}

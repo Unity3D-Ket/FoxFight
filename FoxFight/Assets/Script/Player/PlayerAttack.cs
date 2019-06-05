@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public int attackdmg;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +17,15 @@ public class PlayerAttack : MonoBehaviour
     {
         
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<OpossumHealth>().damageTaken(attackdmg);
+        }
+    }
+
+
+
 }
